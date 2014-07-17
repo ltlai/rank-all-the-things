@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  root 'lists#new'
+
+  resources :lists, only: [:new, :create, :show] do
+    get 'rank', on: :member
+  end
+
+  resources :items, only: :update
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

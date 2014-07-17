@@ -1,0 +1,10 @@
+%h1 Rank All the Things!
+
+#upload_form
+  = form_for @list do |f|
+    = f.label :name, 'List Name:'
+    = f.text_field :name
+    = f.file_field :text_file
+    %br
+    %br
+    = f.submit 'Let the ranking begin!'
