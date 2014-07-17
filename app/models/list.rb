@@ -6,10 +6,10 @@ class List < ActiveRecord::Base
     items.shuffle.each do |item|
       items.shuffle.each do |other_item|
         unless item == other_item
-          return [item, other_item] if item.rank == other_item.rank
+          return [item, other_item] if item.votes == other_item.votes
         end
       end
     end
-    return nil
+    nil
   end
 end

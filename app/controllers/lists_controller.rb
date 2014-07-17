@@ -16,6 +16,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @items = @list.items.order(votes: :desc)
   end
 
   def rank

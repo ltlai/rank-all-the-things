@@ -1,6 +1,5 @@
 %h1= @list.name
 
-- @list.items.each do |item|
-  = item.rank
-  = item.name
-  %br
+%ol
+  - @items.each do |item|
+    %li= item.name
