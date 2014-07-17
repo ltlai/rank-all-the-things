@@ -1,8 +1,9 @@
-- @items.each do |item|
-  = link_to "#{ item.name }", item_path(item), method: :put
-  - unless item == @items.last
-    %br
-    %br
-    OR
-    %br
-    %br
+.voting
+  - @items.each do |item|
+    = link_to "#{ item.name }", item_path(item), method: :put
+    - unless item == @items.last
+      %br
+      %br
+      vs.
+      %br
+      %br

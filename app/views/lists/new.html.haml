@@ -1,6 +1,6 @@
-%h1 Rank All the Things!
+%h1.center Rank All the Things!
 
-#upload_form
+.center
   = form_for @list do |f|
     = f.label :name, 'List Name:'
     = f.text_field :name
@@ -8,3 +8,5 @@
     %br
     %br
     = f.submit 'Let the ranking begin!'
+
+#all-the-things.center= image_tag 'all_the_things.png'

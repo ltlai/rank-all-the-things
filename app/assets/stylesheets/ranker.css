@@ -1,0 +1,17 @@
+.center {
+  text-align: center;
+}
+
+#all-the-things {
+  margin-top: 40px;
+}
+
+.voting {
+  text-align: center;
+  font-size: xx-large;
+  margin-top: 80px;
+}
+
+.result {
+  margin-left: 32px;
+}
