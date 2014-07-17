@@ -17,13 +17,9 @@ class ListsController < ApplicationController
   end
 
   def rank
-    @list = List.find(params[:id])
+    list = List.find(params[:id])
+    @items = list.items_to_rank
 
-    if @list.items_to_rank
-      @item_1 = @list.items_to_rank[0]
-      @item_2 = @list.items_to_rank[1]
-    else
-      redirect_to @list
-    end
+    redirect_to list if @items.nil?
   end
 end
