@@ -6,6 +6,12 @@
   margin-top: 40px;
 }
 
+.fine-print {
+  /*font-style: italic;*/
+  font-size: small;
+  text-align: center;
+}
+
 .voting {
   text-align: center;
   font-size: xx-large;
