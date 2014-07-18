@@ -44,3 +44,4 @@ gem 'pry-rails', group: :development
 
 # Needed to run on Heroku
 gem 'rails_12factor', group: :production
+ruby '2.1.1'
