@@ -14,10 +14,10 @@
 .voting {
   text-align: center;
   font-size: xx-large;
-  margin-top: 80px;
+  margin-top: 48px;
 }
 
-.result {
+.container {
   margin-left: 32px;
 }
 
@@ -44,4 +44,23 @@
   color: #b94a48;
   background-color: #f2dede;
   border-color: #eed3d7;
+}
+
+.nav-bar {
+  list-style-type: none;
+  padding: 8px;
+  margin-left: 24px;
+}
+
+.nav-link {
+  display: inline;
+}
+
+.nav-link:before {
+  content: ' | ';
+  padding: 0px 10px 0px 10px;
+}
+
+.nav-link:first-child:before {
+  content: none;
 }

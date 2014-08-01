@@ -1,6 +1,11 @@
-%h1.result= @list.name
+= render 'shared/menu'
 
-%ol.result
+%h1.container= @list.name
+
+- if @list.items_to_rank
+  .container= link_to 'Rank more things!', rank_list_path(@list)
+
+%ol.container
   - @items.each do |item|
     - item.votes == 1 ? label = 'vote' : label = 'votes'
     %li= "#{item.name} (#{item.votes} #{label})"
