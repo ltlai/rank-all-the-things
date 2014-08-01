@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'lists#new'
 
-  resources :lists, only: [:new, :create, :show] do
+  resources :lists, only: [:new, :create, :show, :index] do
     get 'rank', on: :member
   end
 

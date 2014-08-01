@@ -19,6 +19,10 @@ class ListsController < ApplicationController
     @items = @list.items.order(votes: :desc)
   end
 
+  def index
+    @lists = List.all
+  end
+
   def rank
     list = List.find(params[:id])
     @items = list.items_to_rank
