@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
-  def update
+  def upvote
     item = Item.find(params[:id])
-    item.upvote
+    item.increment!(:votes)
 
     redirect_to rank_list_path(item.list)
   end

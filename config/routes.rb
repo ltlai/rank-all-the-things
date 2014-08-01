@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     get 'rank', on: :member
   end
 
-  resources :items, only: :update
+  resources :items, only: [] do
+    post 'upvote', on: :member
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

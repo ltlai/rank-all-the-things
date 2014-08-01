@@ -1,6 +1,6 @@
 .voting
   - @items.each do |item|
-    = link_to "#{ item.name }", item_path(item), method: :put
+    = link_to "#{ item.name }", upvote_item_path(item), method: :post
     - unless item == @items.last
       %br
       %br
