@@ -4,7 +4,7 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.create!(name: params[:list][:name])
+    @list = List.create!(list_params)
     contents = params[:list][:text_file].read
     @list.populate!(contents)
 
@@ -21,5 +21,11 @@ class ListsController < ApplicationController
     @items = list.items_to_rank
 
     redirect_to list if @items.nil?
+  end
+
+  private
+
+  def list_params
+    params.required(:list).permit(:name)
   end
 end
