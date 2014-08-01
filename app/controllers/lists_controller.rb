@@ -23,7 +23,9 @@ class ListsController < ApplicationController
     list = List.find(params[:id])
     @items = list.items_to_rank
 
-    redirect_to list if @items.nil?
+    if @items.nil?
+      redirect_to list, notice: 'Ranking complete!'
+    end
   end
 
   private
