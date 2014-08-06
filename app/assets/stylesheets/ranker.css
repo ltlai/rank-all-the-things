@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.new_list {
+  text-align: center;
+}
+
 #all-the-things {
   margin-top: 40px;
 }
@@ -34,13 +38,13 @@
   padding: 14px;
 }
 
-.flash_notice {
+.flash.notice {
   border: #d6e9c6;
   color: #468847;
   background-color: #dff0d8;
 }
 
-.flash_alert {
+.flash.alert {
   color: #b94a48;
   background-color: #f2dede;
   border-color: #eed3d7;

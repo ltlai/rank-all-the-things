@@ -1,13 +1,16 @@
+- if @list.errors.any?
+  - @list.errors.full_messages.each do |msg|
+    .flash.alert= msg
+
 %h1.center Rank All the Things!*
 
-.center
-  = form_for @list do |f|
-    = f.label :name, 'List Name:'
-    = f.text_field :name
-    = f.file_field :text_file
-    %br
-    %br
-    = f.submit 'Let the ranking begin!'
+= form_for @list do |f|
+  = f.label :name, 'List Name:'
+  = f.text_field :name
+  = f.file_field :text_file
+  %br
+  %br
+  = f.submit 'Let the ranking begin!'
 
 #all-the-things.center= image_tag 'all_the_things.png'
 %br

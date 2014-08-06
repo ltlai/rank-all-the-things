@@ -1,6 +1,8 @@
 class List < ActiveRecord::Base
   has_many :items
 
+  validates_presence_of :name
+
   def items_to_rank
     return nil if items.empty?
     items.shuffle.combination(2).to_a.each do |pair|
